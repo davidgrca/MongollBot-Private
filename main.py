@@ -160,16 +160,14 @@ async def diccionario(ctx):
 	timestamp=datetime.datetime.utcnow(), color=discord.Colour.magenta())
 	embed.set_thumbnail(url="https://play-lh.googleusercontent.com/dT7lWWuBuaHODG0X6Jp6TX85DuWQFhG1aIVJwgC0CpDkCr7kmnoSqWXz3YxyNowoSDY")
 	embed.set_footer(text=foot)
-
-	embed.add_field(name="**Coñas**", value="Clap: Cuando alguien es reventado en un juego\nRácano: Cuando alguien no compra o no paga\nMezquizo: Rácano\nMoyo: Lorza o Moltó\nSpas: Referencia a Splas\nGato: Animal o Rafa\nFornis: Forma despectiva de nombrar Fortnite\nPasa: Referido a Rabasa\nCryCry: Mandar a alguien a llorar\nGabjed: Manera despectiva de nombrar Cuphead",
+	embed.add_field(name="**Coñas**", value="Clap: Cuando alguien es reventado en un juego\nRácano: Cuando alguien no compra o no paga\nMezquizo: Rácano\nMoyo: Lorza o Moltó\nSpas: Referencia a Splas\nGato: Animal o Rafa\nFornis: Forma despectiva de nombrar Fortnite\nPasa: Referido a Rabasa\nCryCry: Mandar a alguien a llorar\nGabjed: Manera despectiva de nombrar Cuphead\nAgarrado: Rácano",
 	inline=False)
-
-	embed.add_field(name="**Rimas de números**", value="1: Cómeme el aceituno\n3: Me la comes del revés\n4: Por el culo te meto un gato\n5: Por el culo te la inco\n6: Tus padre son gays\n7:Chupame el ojete\n8: Por el culo te la embrocho\n11: Chupamela entonces\n12: Te la meto sin que roce\n13: Mientras más me la chupas más me crece",
+	embed.add_field(name="**Rimas de Números**", value="1: Cómeme el aceituno\n3: Me la comes del revés\n4: Por el culo te meto un gato\n5: Por el culo te la inco\n6: Tus padre son gays\n7:Chupame el ojete\n8: Por el culo te la embrocho\n11: Chupamela entonces\n12: Te la meto sin que roce\n13: Mientras más me la chupas más me crece",
 	inline=False)
-
-	embed.add_field(name="**Rimas de palabras**", value="Que: Mec, cacahué, que me la comas de pie\nQuien: El que tengo aquí colgado\nDime: Que tu cara me deprime",
+	embed.add_field(name="**Rimas de Palabras**", value="Que: Mec, cacahué, que me la comas de pie\nQuien: El que tengo aquí colgado\nDime: Que tu cara me deprime",
 	inline=False)
-
+	embed.add_field(name="**Cultura General**", value="Quiqi: Quiquelo\nPasa: Rabasa\nMoyo: Moltó\nPlazi: Splas",
+	inline=False)
 	await ctx.send(embed=embed)
 
 
