@@ -162,7 +162,7 @@ async def help(ctx):
         "**Comandos**\n.invit (Invitación para el servidor)\n.help (Todos los comandos en el servidor)"
         "\n.info (Información del servidor)\n.ppt (Piedra, Papel, Tijeras)"
         "\n.random10 (Número al azar del 0 al 10)\n.random100 (Número al azar del 0 al 100)"
-        "\n.repe (El bot repite lo que escribas)",
+        "\n.repe (El bot repite lo que escribas)\n.didyouknow (Did You Know?)",
         timestamp=datetime.datetime.utcnow(),
         color=discord.Colour.dark_blue())
     embed.add_field(
@@ -187,7 +187,7 @@ async def help(ctx):
     embed.add_field(
         name="**Info extra**",
         value=">Si queréis roles personalizados o canales hablad con Tupei\n"
-        ">Hay emojis y gifs personalizados. Disfritadlos!!!\n>Hay comandos secretos escondidos en el bot!\n"
+        ">Hay emojis y gifs personalizados. Disfrutadlos!!!\n>Hay comandos secretos escondidos en el bot!\n"
         ">Si no sabéis como invitar a alguien, utilizad este link:\n"
         "https://discord.gg/UcW5cc37Ad",
         inline=True)
@@ -240,6 +240,20 @@ async def repe_error(ctx, error):
         await ctx.send(":x: Necesitas introducir un mensaje")
 
 
+# did you know?
+@client.command()
+async def didyouknow(ctx):
+	await ctx.channel.purge(limit=1)
+	embed = discord.Embed(
+		title="Did You Know?",
+		description="Discord added a cool new way to use bot commands!\n一款默认表情符号。您可以在 Discord 的任意地方使用它",
+		timestamp=datetime.datetime.utcnow(),
+		color=discord.Colour.light_grey()
+	)
+	embed.set_footer(text=foot)
+	await ctx.send(embed=embed)
+
+
 # Mod
 # tell
 @client.command()
@@ -248,9 +262,7 @@ async def tell(ctx, *, args):
     await ctx.channel.purge(limit=1)
     embed = discord.Embed(description=args, color=discord.Colour.orange())
     embed.set_author(
-        name=f"{ctx.author.name}",
-        icon_url=
-        "https://cdn.discordapp.com/avatars/586181490442895361/7827198f3cfb996921f4e2ace0e7b58a.webp?size=128"
+        name=f"{ctx.author.name}"
     )
     await ctx.send(embed=embed)
 
