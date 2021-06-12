@@ -152,6 +152,28 @@ async def random100(ctx):
     await ctx.send(embed=embed)
 
 
+# diccionary
+@client.command()
+async def diccionario(ctx):
+	await ctx.channel.purge(limit=1)
+	embed=discord.Embed(title="Diccionario Mongollo", description="El diccionario de MongollLand recopila todo el\nlenguaje urbano de los miembros del servidor",
+	timestamp=datetime.datetime.utcnow(), color=discord.Colour.magenta())
+	embed.set_thumbnail(url="https://play-lh.googleusercontent.com/dT7lWWuBuaHODG0X6Jp6TX85DuWQFhG1aIVJwgC0CpDkCr7kmnoSqWXz3YxyNowoSDY")
+	embed.set_footer(text=foot)
+
+	embed.add_field(name="**Coñas**", value="Clap: Cuando alguien es reventado en un juego\nRácano: Cuando alguien no compra o no paga\nMezquizo: Rácano\nMoyo: Lorza o Moltó\nSpas: Referencia a Splas\nGato: Animal o Rafa\nFornis: Forma despectiva de nombrar Fortnite\nPasa: Referido a Rabasa\nCryCry: Mandar a alguien a llorar\nGabjed: Manera despectiva de nombrar Cuphead",
+	inline=False)
+
+	embed.add_field(name="**Rimas de números**", value="1: Cómeme el aceituno\n3: Me la comes del revés\n4: Por el culo te meto un gato\n5: Por el culo te la inco\n6: Tus padre son gays\n7:Chupame el ojete\n8: Por el culo te la embrocho\n11: Chupamela entonces\n12: Te la meto sin que roce\n13: Mientras más me la chupas más me crece",
+	inline=False)
+
+	embed.add_field(name="**Rimas de palabras**", value="Que: Mec, cacahué, que me la comas de pie\nQuien: El que tengo aquí colgado\nDime: Que tu cara me deprime",
+	inline=False)
+
+	await ctx.send(embed=embed)
+
+
+
 # help
 @client.command()
 async def help(ctx):
@@ -159,7 +181,7 @@ async def help(ctx):
     embed = discord.Embed(
         title="**###𝐇𝐄𝐋𝐏###**",
         description=
-        "**Comandos**\n.invit (Invitación para el servidor)\n.help (Todos los comandos en el servidor)"
+        "**Comandos**\n.invit (Invitación para el servidor)\n.help (Todos los comandos en el servidor)\n.diccionario (Todo el diccionario de MongollLand)"
         "\n.info (Información del servidor)\n.ppt (Piedra, Papel, Tijeras)"
         "\n.random10 (Número al azar del 0 al 10)\n.random100 (Número al azar del 0 al 100)"
         "\n.repe (El bot repite lo que escribas)\n.didyouknow (Did You Know?)",
